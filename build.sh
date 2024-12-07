@@ -5,7 +5,7 @@
 
 VERSION="0.7"
 PLATFORM="linux64"
-CC="clang"
+CC="emcc"
 OBJ_PATH="o"
 OUT_PATH="bin"
 SRC_PATH="src"
@@ -16,7 +16,7 @@ DEBUG_PATH="$OUT_PATH/m4kc-debug"
 GZEXE_CMD="gzexe $SMALL_PATH"
 ZIP_FILES="$SMALL_PATH"
 
-FLAGS_SMALL="-Os -g0 -fno-stack-protector -fno-unwind-tables \
+FLAGS_SMALL="-flto -O3 -fno-rtti -fno-exceptions -fno-stack-protector -fno-unwind-tables \
 -fno-asynchronous-unwind-tables -Dsmall"
 FLAGS_WARN="-Wall -Wextra"
 FLAGS_DEBUG="-g"

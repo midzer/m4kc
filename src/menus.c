@@ -212,7 +212,7 @@ void state_newWorld (
                 .cursor = 0
         };
         
-        static char nameBuffer[16];
+        static char nameBuffer[16] = "foo";
         static InputBuffer nameInput = {
                 .buffer = nameBuffer,
                 .len    = 16,
